@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3e9">
+  <meta name="description" content="Learn something new at your own pace with Coursecraft.">
+  <title>Coursecraft | A learning garden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile-menu.css">
+  <link rel="stylesheet" href="css/lms.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to your workspace</a>
+
+  <section class="auth" id="authView" aria-label="Account access">
+    <div class="auth-art">
+      <a class="brand light" href="#" aria-label="Coursecraft home">
+        <span class="brand-mark" aria-hidden="true">c</span><span class="siteName">Coursecraft</span>
+      </a>
+      <div class="auth-story">
+        <span class="eyebrow">A LITTLE SPACE TO GROW</span>
+        <h1>Follow your curiosity somewhere new.</h1>
+        <p>Good ideas take root with time. Find a course, meet a great teacher, and make learning your own.</p>
+        <div class="garden-illustration" aria-hidden="true">
+          <span class="garden-sun"></span><span class="garden-hill hill-back"></span><span class="garden-hill hill-front"></span>
+          <span class="garden-stem stem-one"><i></i><b></b></span><span class="garden-stem stem-two"><i></i><b></b></span><span class="garden-stem stem-three"><i></i><b></b></span>
+        </div>
+        <div class="story-note"><span aria-hidden="true">✳</span> Take it one lesson at a time.</div>
+      </div>
+      <div class="auth-art-footer"><span>COURSECRAFT FIELD NOTES</span><span>Make room to grow.</span></div>
+    </div>
+
+    <div class="auth-panel">
+      <div class="auth-mobile brand"><span class="brand-mark" aria-hidden="true">c</span><span class="siteName">Coursecraft</span></div>
+      <div class="auth-card">
+        <div class="auth-heading">
+          <span class="eyebrow" id="authEyebrow">YOUR LEARNING JOURNEY</span>
+          <h2 id="authTitle">Welcome back</h2>
+          <p class="muted" id="authIntro">Sign in and pick up where you left off.</p>
+        </div>
+        <div class="auth-tabs" role="tablist" aria-label="Account options">
+          <button type="button" class="active" data-auth="login" role="tab" aria-selected="true">Sign in</button>
+          <button type="button" data-auth="register" role="tab" aria-selected="false">Join Coursecraft</button>
+        </div>
+        <form id="loginForm" class="form">
+          <label for="loginEmail">Email address<input id="loginEmail" type="email" autocomplete="username" required placeholder="you@example.com"></label>
+          <label for="loginPassword">Password<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Your password"></label>
+          <p class="form-error" id="loginError" role="alert"></p>
+          <button class="btn primary wide" type="submit"><span>Enter your learning space</span><span aria-hidden="true">→</span></button>
+        </form>
+        <form id="registerForm" class="form" hidden>
+          <label for="registerName">Your name<input id="registerName" required maxlength="100" autocomplete="name" placeholder="Alex Morgan"></label>
+          <label for="registerEmail">Email address<input id="registerEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label for="registerRole">I want to join as<select id="registerRole"><option value="STUDENT">A student</option><option value="INSTRUCTOR">An instructor</option></select></label>
+          <label for="registerPassword">Password <small>At least 6 characters</small><input id="registerPassword" type="password" minlength="6" autocomplete="new-password" required></label>
+          <p class="form-error" id="registerError" role="alert"></p>
+          <button class="btn primary wide" type="submit"><span>Create my account</span><span aria-hidden="true">→</span></button>
+        </form>
+        <p class="auth-note">A few minutes today can take you somewhere tomorrow.</p>
+      </div>
+      <div class="auth-legal"><span>Learn at your pace</span><span>Keep a curious mind</span></div>
+    </div>
+  </section>
+
+  <section id="appView" class="app-view" hidden>
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Coursecraft home"><span class="brand-mark" aria-hidden="true">c</span><span class="siteName">Coursecraft</span></a>
+      <div class="workspace"><span class="workspace-dot" aria-hidden="true"></span><span id="roleLabel">Learning garden</span><span class="chevron" aria-hidden="true">⌄</span></div>
+      <div class="side-label">YOUR SPACE</div>
+      <nav id="nav" aria-label="Workspace sections"></nav>
+      <div class="sidebar-bottom">
+        <div class="garden-tip"><span class="tip-seed" aria-hidden="true">✳</span><strong>Keep growing</strong><p>Small steps make a sturdy path.</p><a id="supportLink" href="mailto:hello@coursecraft.local">Ask for a hand <span aria-hidden="true">→</span></a></div>
+        <div class="profile-row"><div class="avatar" id="avatar" aria-hidden="true">C</div><div class="profile-meta"><strong id="profileName">Learner</strong><small id="profileRole">Student</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-context"><span class="context-mark" aria-hidden="true">✳</span><div><small>COURSECRAFT</small><div class="breadcrumb"><span>Workspace</span><b aria-hidden="true">/</b><strong id="crumb">Overview</strong></div></div></div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><div class="profile-menu">
+          <button type="button" class="profile-trigger" id="profileMenuToggle" aria-haspopup="true" aria-expanded="false" aria-controls="profileDropdown"><span class="avatar mini" id="topAvatar" aria-hidden="true">C</span><span class="profile-trigger-name" id="topProfileName">Account</span><span class="profile-caret" aria-hidden="true">⌄</span></button>
+          <div class="profile-dropdown" id="profileDropdown" hidden><div class="dropdown-identity"><div class="avatar" id="dropdownAvatar" aria-hidden="true">C</div><div class="profile-meta"><strong id="dropdownName">Learner</strong><small id="dropdownRole">Student</small></div></div><div class="dropdown-divider"></div><button type="button" class="dropdown-signout" id="profileSignOut"><span aria-hidden="true">↗</span> Sign out</button></div>
+        </div></div>
+      </header>
+      <div id="content" class="content" tabindex="-1"></div>
+    </main>
+  </section>
+
+  <dialog id="courseDialog" aria-labelledby="courseDialogTitle"><form id="courseForm" class="dialog-form">
+    <div class="dialog-head"><div><span class="eyebrow">COURSE DETAILS</span><h2 id="courseDialogTitle">Create a course</h2></div><button type="button" class="icon-button" data-close aria-label="Close dialog">&times;</button></div>
+    <input type="hidden" id="courseId"><div class="field-grid">
+      <label class="span-2" for="courseTitle">Course title<input id="courseTitle" maxlength="150" required placeholder="For example, Foundations of visual design"></label>
+      <label class="span-2" for="courseDescription">Course description<textarea id="courseDescription" required placeholder="What will students learn?"></textarea></label>
+      <label class="span-2" for="courseSyllabus">Syllabus<textarea id="courseSyllabus" required placeholder="Outline the topics and learning outcomes..."></textarea></label>
+      <label class="span-2" for="courseCategory">Category<input id="courseCategory" value="General" required placeholder="Design, technology, business..."></label>
+    </div><div class="dialog-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save course <span aria-hidden="true">→</span></button></div>
+  </form></dialog>
+
+  <dialog id="lessonDialog" aria-labelledby="lessonDialogTitle"><form id="lessonForm" class="dialog-form">
+    <div class="dialog-head"><div><span class="eyebrow">LEARNING MATERIAL</span><h2 id="lessonDialogTitle">Add a lesson</h2></div><button type="button" class="icon-button" data-close aria-label="Close dialog">&times;</button></div>
+    <input type="hidden" id="lessonId"><input type="hidden" id="lessonCourseId"><div class="field-grid">
+      <label class="span-2" for="lessonTitle">Lesson title<input id="lessonTitle" maxlength="150" required placeholder="For example, Getting started"></label>
+      <label class="span-2" for="lessonDescription">Description<textarea id="lessonDescription" placeholder="A short note about this lesson"></textarea></label>
+      <label class="span-2" for="lessonUrl">Material link <small>Optional: paste a web address</small><input id="lessonUrl" type="url" placeholder="https://example.com/lesson"></label>
+    </div><div class="dialog-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save material</button></div>
+  </form></dialog>
+
+  <dialog id="userDialog" aria-labelledby="userDialogTitle"><form id="userForm" class="dialog-form">
+    <div class="dialog-head"><div><span class="eyebrow">NEW ACCOUNT</span><h2 id="userDialogTitle">Create a user</h2></div><button type="button" class="icon-button" data-close aria-label="Close dialog">&times;</button></div>
+    <div class="field-grid">
+      <label class="span-2" for="userName">Full name<input id="userName" required maxlength="100" autocomplete="name"></label>
+      <label class="span-2" for="userEmail">Email<input id="userEmail" type="email" required autocomplete="email"></label>
+      <label for="userRole">Role<select id="userRole"><option value="STUDENT">STUDENT</option><option value="INSTRUCTOR">INSTRUCTOR</option><option value="ADMIN">ADMIN</option></select></label>
+      <label for="userPassword">Temporary password<input id="userPassword" type="password" minlength="6" required autocomplete="new-password"></label>
+    </div><div class="dialog-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Create user</button></div>
+  </form></dialog>
+
+  <div id="toasts" aria-live="polite" aria-atomic="false"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
